@@ -45,10 +45,11 @@ print("Election Results")
 print("-------------------------")
 print(f"Total Votes: {Total_votes}")
 print("-------------------------")
-print(f"{CandidateList[0]}: {CandidatePct[0]} ({CandidateVotes[0]})")
-print(f"{CandidateList[1]}: {CandidatePct[1]} ({CandidateVotes[1]})")
-print(f"{CandidateList[2]}: {CandidatePct[2]} ({CandidateVotes[2]})")
-print(f"{CandidateList[3]}: {CandidatePct[3]} ({CandidateVotes[3]})")
+
+# Loop print of each candidate
+for p in range(len(CandidateList)):
+    print(f"{CandidateList[p]}: {CandidatePct[p]} ({CandidateVotes[p]})")
+
 print("-------------------------")
 print("Winner: "+CandidateList[CandidateVotes.index(max(CandidateVotes))])
 print("-------------------------")
@@ -64,10 +65,11 @@ with open(output_file, 'w') as txtfile:
     txtfile.write("-------------------------\n")
     txtfile.write(f"Total Votes: {Total_votes}\n")
     txtfile.write("-------------------------\n")
-    txtfile.write(f"{CandidateList[0]}: {CandidatePct[0]} ({CandidateVotes[0]})\n")
-    txtfile.write(f"{CandidateList[1]}: {CandidatePct[1]} ({CandidateVotes[1]})\n")
-    txtfile.write(f"{CandidateList[2]}: {CandidatePct[2]} ({CandidateVotes[2]})\n")
-    txtfile.write(f"{CandidateList[3]}: {CandidatePct[3]} ({CandidateVotes[3]})\n")
+
+    # Loop write of each candidate
+    for p in range(len(CandidateList)):
+        txtfile.write(f"{CandidateList[p]}: {CandidatePct[p]} ({CandidateVotes[p]})\n")
+
     txtfile.write("-------------------------\n")  
     txtfile.write("Winner: "+CandidateList[CandidateVotes.index(max(CandidateVotes))] + "\n")  
     txtfile.write("-------------------------")
