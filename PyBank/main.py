@@ -64,7 +64,7 @@ with open(output_file, 'w') as txtfile:
 
     # Write text to file
     txtfile.write("Financial Analysis\n")
-    txtfile.write("--------------------------------------------------")
+    txtfile.write("--------------------------------------------------\n")
     txtfile.write(f"Total Months: {count_months}\n")
     txtfile.write(f"Total Profit/Losses: ${sum_profit}\n")
     txtfile.write("Average Change: $" + str(round(sum_changes/(count_months-1),2)) + "\n") 
