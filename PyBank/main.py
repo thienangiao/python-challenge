@@ -47,13 +47,13 @@ with open(input_file) as input_data:
             max_decrease = change
             max_decdate = row[0]
 
-    print("Financial Analysis")
-    print("--------------------------------------------------")
-    print(f"Total Months: {count_months}") 
-    print(f"Total Profit/Losses: ${sum_profit}")
-    print("Average Change: $" + str(round(sum_changes/(count_months-1),2)))
-    print("Greatest Increase in Profits: " + max_incdate + " ($" + str(max_increase) + ")")
-    print("Greatest Decrease in Profits: " + max_decdate + " ($" + str(max_decrease) + ")")
+print("Financial Analysis")
+print("--------------------------------------------------")
+print(f"Total Months: {count_months}") 
+print(f"Total Profit/Losses: ${sum_profit}")
+print("Average Change: $" + str(round(sum_changes/(count_months-1),2)))
+print("Greatest Increase in Profits: " + max_incdate + " ($" + str(max_increase) + ")")
+print("Greatest Decrease in Profits: " + max_decdate + " ($" + str(max_decrease) + ")")
             
 
 # Specify the file to write to
@@ -63,18 +63,12 @@ output_file = os.path.join("analysis", "result.txt")
 with open(output_file, 'w') as txtfile:
 
     # Write text to file
-    txtfile.write("Financial Analysis")
-    txtfile.write("\n")
+    txtfile.write("Financial Analysis\n")
     txtfile.write("--------------------------------------------------")
-    txtfile.write("\n")
-    txtfile.write(f"Total Months: {count_months}")
-    txtfile.write("\n")
-    txtfile.write(f"Total Profit/Losses: ${sum_profit}")
-    txtfile.write("\n")
-    txtfile.write("Average Change: $" + str(round(sum_changes/(count_months-1),2)))
-    txtfile.write("\n")
-    txtfile.write("Greatest Increase in Profits: " + max_incdate + " ($" + str(max_increase) + ")")
-    txtfile.write("\n")
+    txtfile.write(f"Total Months: {count_months}\n")
+    txtfile.write(f"Total Profit/Losses: ${sum_profit}\n")
+    txtfile.write("Average Change: $" + str(round(sum_changes/(count_months-1),2)) + "\n") 
+    txtfile.write("Greatest Increase in Profits: " + max_incdate + " ($" + str(max_increase) + ")\n")
     txtfile.write("Greatest Decrease in Profits: " + max_decdate + " ($" + str(max_decrease) + ")")
 
 print("Result output to /PyBank/analysis/result.txt")
