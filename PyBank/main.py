@@ -40,7 +40,7 @@ with open(input_file) as input_data:
         # Set current profit as previous profit for next change calculation
         previous_profit = int(row[1])
 
-        # Determin and update only when increase/decrease is maximum
+        # Determine and update only when increase/decrease is maximum
         if change > 0 and change >  max_increase:
             max_increase = change
             max_incdate = row[0]
