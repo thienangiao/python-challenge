@@ -32,6 +32,7 @@ with open(input_file) as input_data:
         # Create unique candidate name list
         if row[2] not in CandidateList:
             CandidateList.append(row[2])
+            
             # Add 1 vote to each candidate as the name is appended to CandidateList
             CandidateVotes.append(1)
 
